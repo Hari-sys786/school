@@ -1,0 +1,98 @@
+[
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_logo.png.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\logo.png"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\drawable_log.png.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\drawable\\log.png"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\drawable_launch_background.xml.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\drawable\\launch_background.xml"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-hdpi_l.jpg.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\mipmap-hdpi\\l.jpg"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_logo.png.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\mipmap-xhdpi\\logo.png"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_log.png.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\log.png"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-mdpi_l.jpg.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\mipmap-mdpi\\l.jpg"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_logo.png.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\logo.png"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-hdpi_log.png.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\mipmap-hdpi\\log.png"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-hdpi_logo.png.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\mipmap-hdpi\\logo.png"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_l.jpg.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\l.jpg"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-mdpi_log.png.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\mipmap-mdpi\\log.png"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\drawable_l.jpg.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\drawable\\l.jpg"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\drawable_logo.png.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\drawable\\logo.png"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-mdpi_logo.png.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\mipmap-mdpi\\logo.png"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_log.png.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\log.png"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_l.jpg.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\l.jpg"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_log.png.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\mipmap-xhdpi\\log.png"
+    },
+    {
+        "merged": "D:\\one\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_l.jpg.flat",
+        "source": "D:\\one\\android\\app\\src\\main\\res\\mipmap-xhdpi\\l.jpg"
+    }
+]

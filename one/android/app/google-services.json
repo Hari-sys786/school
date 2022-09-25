@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "270829244014",
+    "firebase_url": "https://kenndy-a2554-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "kenndy-a2554",
+    "storage_bucket": "kenndy-a2554.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:270829244014:android:3af0e499ee9332ba37607f",
+        "android_client_info": {
+          "package_name": "com.example.one"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "270829244014-0dut8fujhlg01q2vlj3r4uskmjkid0mh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvltaZghX-dl1h-F9opHvaYzHaRkBF11U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "270829244014-0dut8fujhlg01q2vlj3r4uskmjkid0mh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

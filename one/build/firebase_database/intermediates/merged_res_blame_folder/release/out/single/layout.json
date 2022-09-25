@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "D:\\one\\build\\firebase_database\\intermediates\\res\\merged\\release\\layout\\notification_action.xml",
+        "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\0c4ef39e1f0a69047a2107a9f395a96f\\core-1.6.0\\res\\layout\\notification_action.xml"
+    },
+    {
+        "merged": "D:\\one\\build\\firebase_database\\intermediates\\res\\merged\\release\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\0c4ef39e1f0a69047a2107a9f395a96f\\core-1.6.0\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "D:\\one\\build\\firebase_database\\intermediates\\res\\merged\\release\\layout\\custom_dialog.xml",
+        "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\0c4ef39e1f0a69047a2107a9f395a96f\\core-1.6.0\\res\\layout\\custom_dialog.xml"
+    },
+    {
+        "merged": "D:\\one\\build\\firebase_database\\intermediates\\res\\merged\\release\\layout\\notification_template_part_time.xml",
+        "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\0c4ef39e1f0a69047a2107a9f395a96f\\core-1.6.0\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "D:\\one\\build\\firebase_database\\intermediates\\res\\merged\\release\\layout\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\0c4ef39e1f0a69047a2107a9f395a96f\\core-1.6.0\\res\\layout\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "D:\\one\\build\\firebase_database\\intermediates\\res\\merged\\release\\layout\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\0c4ef39e1f0a69047a2107a9f395a96f\\core-1.6.0\\res\\layout\\notification_action_tombstone.xml"
+    }
+]
