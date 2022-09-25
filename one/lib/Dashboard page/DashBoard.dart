@@ -30,7 +30,6 @@ class Dash extends State<DashBoard> {
     'Sixth',
     'Seventh',
     'Eight',
-    'All',
   ];
   static var village = [
     'Tpkm',
