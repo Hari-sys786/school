@@ -28,8 +28,8 @@ dependencies:
   http : any
   fluttertoast: ^8.0.7
   flutter_slidable: ^1.0.0
-  get: ^4.6.1
-  path_provider: ^2.0.11
+  #get: ^4.6.1
+  #path_provider: ^2.0.11
   #localstorage: ^4.0.0+1
   #twilio_flutter: any
   #localstorage: ^4.0.0+1
