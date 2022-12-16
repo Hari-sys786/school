@@ -4,6 +4,7 @@ import 'package:one/Template%20Page/TemplateList.dart';
 import '../Contacts page/AddContact.dart';
 import '../Message page/Message.dart';
 import '../Classes page/Staff.dart';
+import '../Details page/Details.dart';
 //import 'demoMain.dart';
 
 void main() => runApp(DashBoard());
@@ -148,6 +149,55 @@ class Dash extends State<DashBoard> {
                         child: Center(
                           child: Text(
                             "Template",
+                            style: TextStyle(
+                                fontSize: 19,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              )),
+              Container(
+                  child: Padding(
+                padding: EdgeInsets.all(8),
+                child: Card(
+                  color: Color.fromARGB(38, 170, 109, 152),
+                  elevation: 0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: InkWell(
+                    // splashColor: Colors.red.withAlpha(30),
+                    onTap: () {
+                      setState(() {
+                        Text("All Classes");
+                      });
+                      Navigator.push(
+                          context,
+                          PageRouteBuilder(
+                            pageBuilder: (BuildContext context,
+                                    Animation<double> animation,
+                                    Animation<double> secAnimation) =>
+                                Detail(),
+                          ));
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        // color: Colors.cyan,
+                        border: Border.all(
+                          color: Colors.transparent,
+                          width: 5,
+                        ),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 10),
+                        child: Center(
+                          child: Text(
+                            "Details",
                             style: TextStyle(
                                 fontSize: 19,
                                 fontWeight: FontWeight.w500,

@@ -44,10 +44,37 @@ List<smsTemplate> templateList = [
           "Dear Parent, In the View of {#var#} Celebrations are held at school please attend the event Kennedy Up school",
       example:
           "Dear Parent, In the View of Independence day Celebrations are held at school please attend the event Kennedy Up school"),
+];
+
+List<smsTemplate> wishTemp = [
   smsTemplate(
-      title: "Wishes",
+      title: "Vijayadashami",
       description:
           "మీకు మీ కుటుంబ సభ్యులకు విజయదశమి శుభాకాంక్షలు Kennedy Up School",
       example:
           "మీకు మీ కుటుంబ సభ్యులకు విజయదశమి శుభాకాంక్షలు Kennedy Up School"),
+  smsTemplate(
+      title: "Uniform",
+      description:
+          "మీ అబ్బాయి/అమ్మాయికి స్కూల్ యూనిఫామ్ కుట్టించ గలరు. Kennedy Up School",
+      example:
+          "మీ అబ్బాయి/అమ్మాయికి స్కూల్ యూనిఫామ్ కుట్టించ గలరు. Kennedy Up School"),
+  smsTemplate(
+      title: "Christmas",
+      description:
+          "మీకు మీ కుటుంబ సభ్యులకు క్రిస్మస్ శుభాకాంక్షలు Kennedy Up School",
+      example:
+          "మీకు మీ కుటుంబ సభ్యులకు క్రిస్మస్ శుభాకాంక్షలు Kennedy Up School"),
+  smsTemplate(
+      title: "Sankranthri",
+      description:
+          "మీకు మీ కుటుంబ సభ్యులకు సంక్రాంతి శుభాకాంక్షలు Kennedy Up School",
+      example:
+          "మీకు మీ కుటుంబ సభ్యులకు సంక్రాంతి శుభాకాంక్షలు Kennedy Up School"),
+  smsTemplate(
+      title: "Common",
+      description:
+          "మీకు మీ కుటుంబ సభ్యులకు {#var#} శుభాకాంక్షలు Kennedy Up School",
+      example:
+          "మీకు మీ కుటుంబ సభ్యులకు సంక్రాంతి శుభాకాంక్షలు Kennedy Up School"),
 ];

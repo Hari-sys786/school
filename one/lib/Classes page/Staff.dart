@@ -4,16 +4,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import '../Contacts page/EditContact.dart';
 import '../Dashboard page/DashBoard.dart';
+import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 
 class Staff extends StatefulWidget {
   @override
-  _StaffState createState() => _StaffState();
+  StaffState createState() {
+    return StaffState();
+  }
 }
 
 bool search = false;
 bool isSelected = false;
+var call = false;
 
-class _StaffState extends State<Staff> {
+class StaffState extends State<Staff> {
   var Clsname = Dash.Clsname;
   var Clskeys = [];
   late Query _ref;
@@ -57,20 +61,52 @@ class _StaffState extends State<Staff> {
         });
   }
 
+  calling({required Map staff}) async {
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
+              title: Text("Calling ${staff['name']}"),
+              content: Text('Calling +${staff['number']} from your device'),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text('Cancel',
+                      style: TextStyle(color: Colors.red, fontSize: 20)),
+                ),
+                TextButton(
+                    onPressed: () async{
+                      var num = staff['number'].toString();
+                      await FlutterPhoneDirectCaller.callNumber('+' + num);
+                     // launch('tel:' + '+' + num);
+                      Navigator.pop(context);
+                    },
+                    child: Text('Call',
+                        style: TextStyle(color: Colors.blue, fontSize: 20))),
+              ]);
+        });
+  }
+
   Widget _buildContactItem({required Map staff}) {
     return staff['value'] == Clsname
         ? Container(
             child: Slidable(
               child: ListTile(
-                title: Text(staff['name'], style: TextStyle(fontSize: 20)),
-                subtitle: Text('+' + staff['number'].toString(),
-                    style: TextStyle(fontSize: 20)),
-                trailing: Text(staff['type'], style: TextStyle(fontSize: 23)),
-                leading: CircleAvatar(
-                  backgroundImage: AssetImage('images/contacticon.jpg'),
-                  radius: 30,
-                ),
-              ),
+                  title: Text(staff['name'], style: TextStyle(fontSize: 20)),
+                  subtitle: Text('+' + staff['number'].toString(),
+                      style: TextStyle(fontSize: 20)),
+                  trailing: Text(staff['type'], style: TextStyle(fontSize: 23)),
+                  leading: CircleAvatar(
+                    backgroundImage: AssetImage('images/contacticon.jpg'),
+                    radius: 30,
+                  ),
+                  onLongPress: () => {
+                     calling(staff: staff) 
+                  }),
               endActionPane: ActionPane(motion: ScrollMotion(), children: [
                 SlidableAction(
                   flex: 1,
