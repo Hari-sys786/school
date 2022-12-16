@@ -41,8 +41,9 @@ class DetailClasses extends State<Detail> {
     extractedData = json.decode(res.body) as Map<String, dynamic>;
   }
 
+  // displaying the data based on class selection
   display(className) {
-    print(className);
+    //print(className);
     // print(staff['value']);
     return className != null
         ? FirebaseAnimatedList(
@@ -61,9 +62,10 @@ class DetailClasses extends State<Detail> {
           );
   }
 
+  // storing all numbers in All list
   abc(name, staff) {
     if (All.isEmpty) {
-      print('aaaaalllll' + name);
+      //print('aaaaalllll' + name);
       extractedData.forEach((name, staff) {
         for (var i = 0; i < a.length; i++) {
           if (staff['value'] == a[i]) {
@@ -72,7 +74,7 @@ class DetailClasses extends State<Detail> {
           }
         }
       });
-      print(All.length);
+      //print(All.length);
     }
     // else {
     //   print("check repetation");
@@ -80,6 +82,7 @@ class DetailClasses extends State<Detail> {
     return false;
   }
 
+  // checkbox list format similar to staff
   _buildContactItem(name, {required Map staff}) {
     return staff['value'] == name
         ? InkWell(
@@ -114,6 +117,7 @@ class DetailClasses extends State<Detail> {
         : Container();
   }
 
+  //toogle checkbox and adding removing the selected contacts
   _onCategorySelected(select, key) {
     if (select == false) {
       Clskeyss.add(key);
@@ -124,6 +128,7 @@ class DetailClasses extends State<Detail> {
     // print(Clskeyss);
   }
 
+  //textfield for entering msg
   _sendSms(All, Clskeyss) {
     showDialog(
         context: context,
@@ -171,7 +176,7 @@ class DetailClasses extends State<Detail> {
     var set2 = Set.from(Clskeyss);
     // print(set2);
     contacts = List.from(set1.difference(set2));
-    print(contacts.length);
+    //print(contacts.length);
     //print(bodyy);
     _sendingSms();
     // Navigator.pop(context);
@@ -227,7 +232,7 @@ class DetailClasses extends State<Detail> {
     }
     var res = json.decode(response.body);
     var res1 = json.decode(response.body)["errors"];
-    if (res["status"] == "failure") {
+    if (res["status"] == "success") {
       contacts.clear();
       All.clear();
       Clskeyss.clear();
@@ -235,13 +240,12 @@ class DetailClasses extends State<Detail> {
       showToast(msgs);
       sleep(Duration(seconds: 2));
       Navigator.push(
-        context,
-        PageRouteBuilder(
-          pageBuilder: (BuildContext context,
-                  Animation<double> animation,
-                  Animation<double> secAnimation) =>
-              DashBoard(),
-        ));
+          context,
+          PageRouteBuilder(
+            pageBuilder: (BuildContext context, Animation<double> animation,
+                    Animation<double> secAnimation) =>
+                DashBoard(),
+          ));
     } else if (res1[0]["code"] == 204) {
       var msgs = "Invalid message content";
       showToast(msgs);
@@ -268,7 +272,7 @@ class DetailClasses extends State<Detail> {
       Navigator.pop(context);
     }
   }
- 
+
   // loading screen for sending sms
   showLoading() {
     showDialog(
@@ -306,80 +310,96 @@ class DetailClasses extends State<Detail> {
     );
   }
 
+  //going to back to remove list data logic
+  Future<bool> _deleteValues() async {
+    All.clear();
+    Clskeyss.clear();
+    contacts.clear();
+    print(All);
+    print(Clskeyss);
+    print(contacts);
+    Navigator.pop(context);
+    return true;
+  }
+
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text('All Classes'),
-          backgroundColor: Colors.deepPurple,
-        ),
-        body: SingleChildScrollView(
-          child: Container(
-              child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              SizedBox(height: 10),
-              ButtonTheme(
-                alignedDropdown: true,
-                child: DropdownButton(
-                  isExpanded: true,
-                  value: _typeSelected,
-                  items: [
-                    for (var i = 1; i <= a.length; i++)
-                      DropdownMenuItem(
-                          child: Center(
-                            child: Text(
-                              "${a[i - 1]}",
-                              style:
-                                  TextStyle(fontSize: 22, color: Colors.black),
+    return WillPopScope(
+      onWillPop: _deleteValues,
+      child: Scaffold(
+          appBar: AppBar(
+            title: Text('All Classes'),
+            backgroundColor: Colors.deepPurple,
+          ),
+          body: SingleChildScrollView(
+            child: Container(
+                child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SizedBox(height: 10),
+                ButtonTheme(
+                  alignedDropdown: true,
+                  child: DropdownButton(
+                    isExpanded: true,
+                    value: _typeSelected,
+                    items: [
+                      for (var i = 1; i <= a.length; i++)
+                        DropdownMenuItem(
+                            child: Center(
+                              child: Text(
+                                "${a[i - 1]}",
+                                style: TextStyle(
+                                    fontSize: 22, color: Colors.black),
+                              ),
                             ),
-                          ),
-                          value: "${a[i - 1]}"),
-                  ],
-                  onChanged: (dynamic value) {
-                    setState(
-                      () {
-                        _typeSelected = value;
-                        selectName = value;
-                      },
-                    );
-                  },
-                  style: Theme.of(context).textTheme.titleMedium,
-                  hint: Center(
-                    child: Text(
-                      'Select Class ',
-                      style: TextStyle(fontSize: 22, color: Colors.black),
+                            value: "${a[i - 1]}"),
+                    ],
+                    onChanged: (dynamic value) {
+                      setState(
+                        () {
+                          _typeSelected = value;
+                          selectName = value;
+                        },
+                      );
+                    },
+                    style: Theme.of(context).textTheme.titleMedium,
+                    hint: Center(
+                      child: Text(
+                        'Select Class ',
+                        style: TextStyle(fontSize: 22, color: Colors.black),
+                      ),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(height: 10),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: display(_typeSelected),
-              ),
-              // SizedBox(height: 10),
-              Container(
-                  height: 40,
-                  width: 320,
-                  child: _typeSelected != null
-                      ? Container(
-                          child: ElevatedButton(
-                              child: Text("Submit",
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 20)),
-                              style: ElevatedButton.styleFrom(
-                                  primary: Colors.deepPurple,
-                                  elevation: 25,
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(30))),
-                              onPressed: () {
-                                _sendSms(All, Clskeyss);
-                              }),
-                        )
-                      : Container()),
-              SizedBox(height: 10)
-            ],
+                SizedBox(height: 10),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: display(_typeSelected),
+                ),
+                // SizedBox(height: 10),
+                Container(
+                    height: 40,
+                    width: 320,
+                    child: _typeSelected != null
+                        ? Container(
+                            child: ElevatedButton(
+                                child: Text("Submit",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 20)),
+                                style: ElevatedButton.styleFrom(
+                                    primary: Colors.deepPurple,
+                                    elevation: 25,
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(30))),
+                                onPressed: () {
+                                  _sendSms(All, Clskeyss);
+                                }),
+                          )
+                        : Container()),
+                SizedBox(height: 10)
+              ],
+            )),
           )),
-        ));
+    );
   }
 }
