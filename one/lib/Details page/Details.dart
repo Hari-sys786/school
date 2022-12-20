@@ -238,14 +238,9 @@ class DetailClasses extends State<Detail> {
       Clskeyss.clear();
       var msgs = "SMS sent successfully ${res["balance"]}";
       showToast(msgs);
-      sleep(Duration(seconds: 2));
-      Navigator.push(
-          context,
-          PageRouteBuilder(
-            pageBuilder: (BuildContext context, Animation<double> animation,
-                    Animation<double> secAnimation) =>
-                DashBoard(),
-          ));
+      //sleep(Duration(seconds: 2));
+      Navigator.pop(context);
+      Navigator.pop(context);
     } else if (res1[0]["code"] == 204) {
       var msgs = "Invalid message content";
       showToast(msgs);
