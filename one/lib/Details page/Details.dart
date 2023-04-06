@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:one/Classes%20page/Staff.dart';
 import 'package:one/Dashboard page/DashBoard.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'dart:convert' show json;
@@ -23,6 +24,8 @@ class DetailClasses extends State<Detail> {
   List<int> Clskeyss = [];
   List<int> All = [];
   List<int> contacts = [];
+  List<String> Names = [];
+  var staffData = [];
   //var storeNum = [];
   var extractedData;
   var a = Dash.a;
@@ -39,6 +42,7 @@ class DetailClasses extends State<Detail> {
         "https://kenndy-a2554-default-rtdb.asia-southeast1.firebasedatabase.app/Staff.json?"));
     //print(json.decode(res.body));
     extractedData = json.decode(res.body) as Map<String, dynamic>;
+    extractedData.forEach((k, v) => {staffData.add(v)});
   }
 
   // displaying the data based on class selection
@@ -62,24 +66,49 @@ class DetailClasses extends State<Detail> {
           );
   }
 
-  // storing all numbers in All list
-  abc(name, staff) {
-    if (All.isEmpty) {
-      //print('aaaaalllll' + name);
-      extractedData.forEach((name, staff) {
-        for (var i = 0; i < a.length; i++) {
-          if (staff['value'] == a[i]) {
-            //print(a[i]);
-            All.add(staff['number']);
-          }
+  addOrRemove(data, name) {
+    setState(() {
+      if (name != "name") {
+        int i = 0;
+        All.contains(data) ? All.remove(data) : All.add(data);
+        Names.contains(name) ? Names.remove(name) : false;
+        staffData.forEach((element) {
+          name == element['value']
+              ? !All.contains(element['number'])
+                  ? i++
+                  : false
+              : false;
+        });
+        i == 0 ? Names.add(name) : false;
+      } else {
+        if (Names.contains(data)) {
+          staffData.forEach((element) {
+            if (data == element['value']) {
+              All.remove(element['number']);
+            }
+          });
+          Names.remove(data);
+        } else {
+          staffData.forEach((element) {
+            if (data == element['value']) {
+              All.add(element['number']);
+            }
+          });
+          Names.add(data);
         }
-      });
-      //print(All.length);
-    }
-    // else {
-    //   print("check repetation");
-    // }
-    return false;
+        // print(Names);
+      }
+      All = All.toSet().toList();
+      // print(All.length);
+    });
+  }
+
+  checkSelected(number) {
+    return All.contains(number) ? true : false;
+  }
+
+  checkSelectedName(name) {
+    return Names.contains(name) ? true : false;
   }
 
   // checkbox list format similar to staff
@@ -99,13 +128,14 @@ class DetailClasses extends State<Detail> {
               checkColor: Colors.white,
               activeColor: Colors.blue,
               //tileColor: Colors.blue,
-              selected: abc(name, staff),
-              value: Clskeyss.contains(staff['number']) ? false : true,
+              // selected: abc(name, staff),
+              value: checkSelected(staff['number']),
               onChanged: (value) {
                 setState(() {
                   // print(staff['key']);
                   // this._value = value!;
-                  _onCategorySelected(value, staff['number']);
+                  addOrRemove(staff['number'], staff['value']);
+                  // _onCategorySelected(value, staff['number']);
                   //print(All);
                   //value = true;
                 });
@@ -171,11 +201,11 @@ class DetailClasses extends State<Detail> {
 
   // logic for selected contacts and calling function of sms api
   testing() {
-    var set1 = Set.from(All);
-    // print(set1);
-    var set2 = Set.from(Clskeyss);
-    // print(set2);
-    contacts = List.from(set1.difference(set2));
+    contacts = All.toSet().toList();
+    // // print(set1);
+    // var set2 = Set.from(Clskeyss);
+    // // print(set2);
+    // contacts = List.from(set1.difference(set2));
     //print(contacts.length);
     //print(bodyy);
     _sendingSms();
@@ -365,6 +395,27 @@ class DetailClasses extends State<Detail> {
                     ),
                   ),
                 ),
+                SizedBox(height: 10),
+                _typeSelected != null
+                    ? InkWell(
+                        child: Container(
+                            child: CheckboxListTile(
+                          title: Text("Select all",
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.black)),
+                          checkColor: Colors.white,
+                          activeColor: Colors.blue,
+                          //tileColor: Colors.blue,
+                          // selected: abc(name, staff),
+                          value: checkSelectedName(_typeSelected),
+                          onChanged: (value) {
+                            setState(() {
+                              addOrRemove(_typeSelected, "name");
+                            });
+                          },
+                        )),
+                      )
+                    : Container(),
                 SizedBox(height: 10),
                 Padding(
                   padding: const EdgeInsets.all(8.0),

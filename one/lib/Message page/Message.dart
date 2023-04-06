@@ -8,6 +8,8 @@ import 'package:http/http.dart' as http;
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
+import '../main.dart';
+
 void main() => runApp(Message());
 
 class Message extends StatefulWidget {
@@ -93,7 +95,7 @@ class _SelectState extends State<Select> {
 
 class MessageState extends State<Message> {
   // final controller = TestController();
-  var bal = 0;
+  var bal = MyHomePageState.balance;
   late TextEditingController msgController;
   // late TwilioFlutter twilioFlutter;
   static List<String> clss = [];
@@ -109,7 +111,7 @@ class MessageState extends State<Message> {
     //msg();
   }
 
-  showLoading() {
+  showLoading(data) {
     showDialog(
       builder: (BuildContext context) {
         return WillPopScope(
@@ -128,7 +130,9 @@ class MessageState extends State<Message> {
                     height: 8,
                   ),
                   Text(
-                    "\nSending SMS...\nPlease Do not press back",
+                    data == "sms"
+                        ? "\nSending SMS...\nPlease Do not press back"
+                        : "",
                     style: Theme.of(context)
                         .textTheme
                         .headline5!
@@ -163,7 +167,8 @@ class MessageState extends State<Message> {
         }
       }
     });
-    print(storeNum.toSet().toList());
+    var c = storeNum.toSet().toList().length;
+    print("Contacts count: $c");
     if (storeNum.isEmpty == true) {
       var msgs = "No Data Found";
       showToast(msgs);
@@ -175,8 +180,8 @@ class MessageState extends State<Message> {
 
 //smsapi() function is used to call textlocal api
   smsapi() async {
-    showLoading();
-    //var num = storeNum.toSet();
+    showLoading("sms");
+    //var num = storeNum.toSet(); http://192.168.55.103/message.php
     final Map<String, dynamic> bodys = {
       "message": msgController.text,
       "number": storeNum.toSet().toString()
@@ -196,6 +201,10 @@ class MessageState extends State<Message> {
       Navigator.pop(context);
     } on SocketException {
       var msgs = "Turn on internet connection";
+      showToast(msgs);
+      Navigator.pop(context);
+    } on FormatException {
+      var msgs = "Something went wrong";
       showToast(msgs);
       Navigator.pop(context);
     }
@@ -226,12 +235,20 @@ class MessageState extends State<Message> {
     var res1 = json.decode(response.body)["errors"];
     if (res["status"] == "success") {
       clss.clear();
+      setState(() {
+        MyHomePageState.balance = res["balance"];
+      });
       var msgs = "SMS sent successfully ${res["balance"]}";
       showToast(msgs);
       sleep(Duration(seconds: 2));
       Navigator.pop(context);
     } else if (res1[0]["code"] == 204) {
       var msgs = "Invalid message content";
+      showToast(msgs);
+      sleep(Duration(seconds: 2));
+      Navigator.pop(context);
+    } else if (res1[0]["code"] == 7) {
+      var msgs = "Insufficient credits";
       showToast(msgs);
       sleep(Duration(seconds: 2));
       Navigator.pop(context);

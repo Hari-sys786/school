@@ -1,7 +1,11 @@
 import 'dart:async';
+import 'dart:io';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'Contacts page/AddContact.dart';
 import 'Dashboard page/DashBoard.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,27 +25,42 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  MyHomePageState createState() => MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class MyHomePageState extends State<MyHomePage> {
+  static var balance = 0;
+
   @override
   void initState() {
     super.initState();
+    balanceCheck();
+  }
+
+  balanceCheck() async {
+    try {
+      http.Response response = await http
+          .get(Uri.parse("https://smssending1.000webhostapp.com/balance.php"))
+          .timeout(Duration(seconds: 20));
+      var res = json.decode(response.body);
+      setState(() {
+        balance = res["balance"]["sms"];
+      });
+    } on TimeoutException {
+      var msgs = "Timeout Error";
+      showToast(msgs);
+    } on SocketException {
+      var msgs = "Turn on internet connection";
+      showToast(msgs);
+    } on FormatException {
+      var msgs = "Something went wrong";
+      showToast(msgs);
+    }
     Timer(
         Duration(milliseconds: 1000),
         () => Navigator.push(
             context,
             PageRouteBuilder(
-                transitionDuration: Duration(
-                  milliseconds: 300,
-                ),
-                transitionsBuilder: (BuildContext context,
-                    Animation<double> animation,
-                    Animation<double> secAnimation,
-                    Widget child) {
-                  return ScaleTransition(scale: animation, child: child);
-                },
                 pageBuilder: (BuildContext context, Animation<double> animation,
                         Animation<double> secAnimation) =>
                     DashBoard())));
@@ -50,7 +69,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
       body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[

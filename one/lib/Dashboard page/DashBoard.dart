@@ -45,6 +45,11 @@ class Dash extends State<DashBoard> {
     'Glp',
   ];
 
+  @override
+  void initState() {
+    super.initState();
+  }
+
   Future<bool> _onBackPressed() {
     return exit(0);
   }

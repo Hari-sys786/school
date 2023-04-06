@@ -7,9 +7,12 @@ $sender = urlencode('KENNED');
 $message = rawurlencode($_POST['message']);
 
 $numbers = implode(',', $numbers);
- 
+
+// Check if message contains non-English characters
+$unicode = preg_match('/[^\x00-\x7F]/', $message);
+
 // Prepare data for POST request
-$data = array('apikey' => $apiKey, 'numbers' => $numbers, "sender" => $sender, "message" => $message, "unicode" => true);
+$data = array('apikey' => $apiKey, 'numbers' => $numbers, "sender" => $sender, "message" => $message, "unicode" => $unicode);
 // Send the POST request with cURL
 $ch = curl_init('https://api.textlocal.in/send/');
 curl_setopt($ch, CURLOPT_POST, true);
