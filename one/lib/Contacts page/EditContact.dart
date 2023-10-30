@@ -186,7 +186,7 @@ class _EditContactState extends State<EditContact> {
                       style: TextStyle(color: Colors.white, fontSize: 20),
                     ),
                     style: ElevatedButton.styleFrom(
-                        primary: Colors.deepPurple,
+                        backgroundColor: Colors.deepPurple,
                         elevation: 25,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30))),
@@ -218,7 +218,7 @@ class _EditContactState extends State<EditContact> {
                       style: TextStyle(color: Colors.white, fontSize: 20),
                     ),
                     style: ElevatedButton.styleFrom(
-                        primary: Colors.deepPurple,
+                        backgroundColor: Colors.deepPurple,
                         elevation: 25,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30))),

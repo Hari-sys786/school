@@ -4,7 +4,6 @@ import 'dart:io';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:one/Classes%20page/Staff.dart';
 import 'package:one/Dashboard page/DashBoard.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'dart:convert' show json;
@@ -189,7 +188,7 @@ class DetailClasses extends State<Detail> {
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
-                    primary: Colors.deepPurple,
+                    backgroundColor: Colors.deepPurple,
                     elevation: 25,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30))),
@@ -321,7 +320,7 @@ class DetailClasses extends State<Detail> {
                     "\nSending SMS...\nPlease Do not press back",
                     style: Theme.of(context)
                         .textTheme
-                        .headline5!
+                        .headlineSmall!
                         .merge(TextStyle(color: Colors.white)),
                     textAlign: TextAlign.center,
                   )
@@ -432,7 +431,7 @@ class DetailClasses extends State<Detail> {
                                     style: TextStyle(
                                         color: Colors.white, fontSize: 20)),
                                 style: ElevatedButton.styleFrom(
-                                    primary: Colors.deepPurple,
+                                    backgroundColor: Colors.deepPurple,
                                     elevation: 25,
                                     shape: RoundedRectangleBorder(
                                         borderRadius:

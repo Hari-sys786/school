@@ -135,7 +135,7 @@ class MessageState extends State<Message> {
                         : "",
                     style: Theme.of(context)
                         .textTheme
-                        .headline5!
+                        .headlineSmall!
                         .merge(TextStyle(color: Colors.white)),
                     textAlign: TextAlign.center,
                   )
@@ -345,7 +345,7 @@ class MessageState extends State<Message> {
                             style: TextStyle(color: Colors.white, fontSize: 20),
                           ),
                           style: ElevatedButton.styleFrom(
-                              primary: Colors.deepPurple,
+                              backgroundColor: Colors.deepPurple,
                               elevation: 25,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30))),
@@ -365,7 +365,7 @@ class MessageState extends State<Message> {
                             style: TextStyle(color: Colors.white, fontSize: 20),
                           ),
                           style: ElevatedButton.styleFrom(
-                              primary: Colors.deepPurple,
+                              backgroundColor: Colors.deepPurple,
                               elevation: 25,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30))),
