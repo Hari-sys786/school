@@ -1,9 +1,8 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_database/firebase_database.dart';
+// import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'Contacts page/AddContact.dart';
 import 'Dashboard page/DashBoard.dart';
 import 'dart:convert';
 import 'dart:core';
@@ -19,6 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      color: Colors.black,
       home: MyHomePage(),
       debugShowCheckedModeBanner: false,
     );
@@ -33,6 +33,13 @@ class MyHomePage extends StatefulWidget {
 class MyHomePageState extends State<MyHomePage> {
   static var balance = 0;
   var classesName = Dash.a;
+  static var siteUrl;
+  var url;
+  var msgs;
+  var isLoading = true;
+  var balCheck = false;
+  var errorCheck = false;
+  var errorCheck_bal = false;
   static var classs = [
     'Nursery',
     'Lkg',
@@ -50,131 +57,201 @@ class MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    dateCheck();
-    balanceCheck();
+    // Delay for 5 seconds before making the API call
+    Future.delayed(Duration(seconds: 3), () {
+      // Perform your API call here
+      site();
+      // You can replace this with your actual API call logic
+      // For now, we simulate a simple API call with a delay of 2 seconds
+      Future.delayed(Duration(seconds: 2), () {
+        // API call completed, update the widget state
+        setState(() {
+          isLoading = false; // Set loading indicator to false
+        });
+      });
+    });
   }
 
-  Future<void> dateCheck() async {
-    DatabaseReference del = FirebaseDatabase.instance.ref();
-    late Query ref = del.child('Staff');
-    DatabaseEvent event = await ref.once();
-    DataSnapshot snapshot = event.snapshot;
-    Map<dynamic, dynamic> values =
-        await snapshot.value as Map<dynamic, dynamic>;
-    var count = 0;
-    DateTime now = DateTime.now();
-    int datee = now.day;
-    int monn = now.month;
-    if (monn == 7 && datee == 06) {
-      count = count + 1;
-      if (count == 1) {
-        try {
-          var res = await http.get(Uri.parse(
-              "https://kenndy-a2554-default-rtdb.asia-southeast1.firebasedatabase.app/Staff.json?"));
-          Map<dynamic, dynamic> extractedData =
-              json.decode(res.body) as Map<dynamic, dynamic>;
-          extractedData.forEach((name, staff) async {
-            for (var i = 0; i < classesName.length; i++) {
-              if (staff['value'] != "Staff") {
-                if (classs.contains(staff['value'])) {
-                  var index = classs.indexOf(staff['value']);
-                  // values.forEach((key, value) async {
-                  //   if (value['value'] == "Eight") {
-                  //     await del.child('Staff').child(key).remove();
-                  //   } else {
-                  //     print(key);
-                  //     await del.child(key).update({
-                  //       'name': value['name'],
-                  //       'number': value['number'],
-                  //       'type': value['type'],
-                  //       'value': classs[index + 1]
-                  //     });
-                  //   }
-                  // });
-                  for (final entry in values.entries) {
-                    final key = entry.key;
-                    final value = entry.value;
-
-                    if (value['value'] == "Eight") {
-                      await del.child('Staff').child(key).remove().whenComplete(() => Navigator.push(
-                                  context,
-                                  PageRouteBuilder(
-                                      pageBuilder: (BuildContext context, Animation<double> animation,
-                                              Animation<double> secAnimation) =>
-                                          DashBoard())));
-                    } else {
-                      print(key);
-                      await del.child(key).update({
-                        'name': value['name'],
-                        'number': value['number'],
-                        'type': value['type'],
-                        'value': classs[index + 1]
-                      }).whenComplete(() => Navigator.push(
-                                  context,
-                                  PageRouteBuilder(
-                                      pageBuilder: (BuildContext context, Animation<double> animation,
-                                              Animation<double> secAnimation) =>
-                                          DashBoard())));
-                    }
-                  }
-                }
-              }
-            }
-          });
-        } on Exception catch (e) {
-          print("hahah ${e}");
-        }
-      }
-    } else {
-      print("exceed");
-      count = 0;
+  handleApierror(e) {
+    print(e);
+    errorCheck_bal = true;
+     if (e is TimeoutException) {
+          msgs = "Timeout Error";
+       } else if(e is SocketException){
+          msgs = "Check your internet/Server Connection";
+       } else if(e is FormatException) {
+          msgs = "Server went wrong";
+       } else{
+          msgs = "Cannot connect to server";
+       }
+       setState(() { 
+        errorCheck = true;
+       });
     }
+  
+  site() async{
+    try {
+      http.Response response = await http
+          .get(Uri.parse("https://smssending1.000webhostapp.com/site.php"))
+          .timeout(Duration(seconds: 20));
+      var res = response.body;
+      setState(() {
+        siteUrl = res;
+        url = siteUrl+"/php/balance.php";
+        print(url);
+      });
+      // print(response.statusCode);
+      if(response.statusCode == 200){
+        await balanceCheck();
+      } 
+      else {
+        setState(() { 
+          errorCheck = true;
+        });
+        msgs = "Cannot connect to server";
+      }
+      
+    } on Exception catch(e){
+      handleApierror(e);
+    }
+  }
+    
+  error() {
+    return Container(
+      color: Colors.black,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Column(
+              children: [
+                Image.asset(
+                  'images/no-internet.png',
+                  height: 190.0,
+                ),
+                SizedBox(height: 20,),
+                Center(
+                  child: Text(msgs+" 😥",
+                          style: TextStyle(
+                                  fontSize: 19,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white)),
+                )
+              ],
+            ),
+          ),
+          SizedBox(height: 30.0),
+        ],
+      ),
+    );
+  }
+
+
+  working() {
+    return Scaffold(
+      body: Container(
+        color: Colors.black,
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Image.asset(
+                  'images/Logo.png',
+                  height: 190.0,
+                ),
+              ),
+              SizedBox(height: 30.0),
+            ]),
+      ),
+    );
   }
 
   balanceCheck() async {
     try {
       http.Response response = await http
-          .get(Uri.parse("https://smssending1.000webhostapp.com/balance.php"))
+          .get(Uri.parse(url))
           .timeout(Duration(seconds: 20));
       var res = json.decode(response.body);
       setState(() {
         balance = res["balance"]["sms"];
       });
-    } on TimeoutException {
-      var msgs = "Timeout Error";
-      showToast(msgs);
-    } on SocketException {
-      var msgs = "Turn on internet connection";
-      showToast(msgs);
-    } on FormatException {
-      var msgs = "Something went wrong";
-      showToast(msgs);
+      if(response.statusCode == 200){
+         setState(() {
+          balCheck = true;
+        });
+      } 
+      else {
+        setState(() { 
+          errorCheck = true;
+       });
+      }
+    } on Exception catch(e){
+        handleApierror(e);
     }
-    Timer(
-        Duration(milliseconds: 1000),
-        () => Navigator.push(
-            context,
-            PageRouteBuilder(
-                pageBuilder: (BuildContext context, Animation<double> animation,
-                        Animation<double> secAnimation) =>
-                    DashBoard())));
+    if(errorCheck_bal) {
+      setState(() {
+          errorCheck = true;
+      });
+      Future.delayed(Duration(seconds: 5),() {
+          Timer(
+            Duration(),
+            () => Navigator.push(
+                context,
+                PageRouteBuilder(
+                    pageBuilder: (BuildContext context, Animation<double> animation,
+                            Animation<double> secAnimation) =>
+                        DashBoard())));
+      });
+    } else {
+      Timer(
+          Duration(),
+          () => Navigator.push(
+              context,
+              PageRouteBuilder(
+                  pageBuilder: (BuildContext context, Animation<double> animation,
+                          Animation<double> secAnimation) =>
+                      DashBoard())));
+      }
+  }
+  
+  
+
+  Widget allLogic() {
+    print(balCheck);
+    print(errorCheck);
+    if (balCheck == true)  {  
+      return working();  
+    } else if (errorCheck == true) {
+      return error();
+    } else {
+        return Scaffold(
+          body: Container(
+            color: Colors.black,
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Image.asset(
+                      'images/Logo.png',
+                      height: 190.0,
+                    ),
+                  ),
+                  SizedBox(height: 30.0),
+                ]),
+          ),
+        );
+    }
   }
 
-  @override
+@override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Image.asset(
-                'images/Logo.png',
-                height: 190.0,
-              ),
-            ),
-            SizedBox(height: 30.0),
-          ]),
+      body: Container(
+         child: isLoading?working():allLogic()
+      )
     );
   }
 }

@@ -1,4 +1,0 @@
-# Referenced at D:\one\build\app\intermediates\merged_manifests\debug\AndroidManifest.xml:28
--keep class android.app.Application { <init>(); }
-# Referenced at D:\one\build\app\intermediates\merged_manifests\debug\AndroidManifest.xml:28
--keep class androidx.core.app.CoreComponentFactory { <init>(); }

@@ -1,18 +1,18 @@
 [
     {
-        "merged": "D:\\one\\build\\firebase_core\\intermediates\\res\\merged\\release\\layout-v21\\notification_template_custom_big.xml",
-        "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\0c4ef39e1f0a69047a2107a9f395a96f\\core-1.6.0\\res\\layout-v21\\notification_template_custom_big.xml"
-    },
-    {
-        "merged": "D:\\one\\build\\firebase_core\\intermediates\\res\\merged\\release\\layout-v21\\notification_template_icon_group.xml",
+        "merged": "D:\\one\\one\\build\\firebase_core\\intermediates\\res\\merged\\release\\layout-v21\\notification_template_icon_group.xml",
         "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\0c4ef39e1f0a69047a2107a9f395a96f\\core-1.6.0\\res\\layout-v21\\notification_template_icon_group.xml"
     },
     {
-        "merged": "D:\\one\\build\\firebase_core\\intermediates\\res\\merged\\release\\layout-v21\\notification_action.xml",
-        "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\0c4ef39e1f0a69047a2107a9f395a96f\\core-1.6.0\\res\\layout-v21\\notification_action.xml"
+        "merged": "D:\\one\\one\\build\\firebase_core\\intermediates\\res\\merged\\release\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\0c4ef39e1f0a69047a2107a9f395a96f\\core-1.6.0\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
-        "merged": "D:\\one\\build\\firebase_core\\intermediates\\res\\merged\\release\\layout-v21\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\0c4ef39e1f0a69047a2107a9f395a96f\\core-1.6.0\\res\\layout-v21\\notification_action_tombstone.xml"
+        "merged": "D:\\one\\one\\build\\firebase_core\\intermediates\\res\\merged\\release\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\0c4ef39e1f0a69047a2107a9f395a96f\\core-1.6.0\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "D:\\one\\one\\build\\firebase_core\\intermediates\\res\\merged\\release\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\0c4ef39e1f0a69047a2107a9f395a96f\\core-1.6.0\\res\\layout-v21\\notification_action.xml"
     }
 ]

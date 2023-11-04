@@ -170,7 +170,7 @@ class MessageState extends State<Message> {
     var c = storeNum.toSet().toList().length;
     print("Contacts count: $c");
     if (storeNum.isEmpty == true) {
-      var msgs = "No Data Found";
+      var msgs = "Please Select the Class";
       showToast(msgs);
     } else {
       smsapi();
@@ -180,6 +180,7 @@ class MessageState extends State<Message> {
 
 //smsapi() function is used to call textlocal api
   smsapi() async {
+    var url = MyHomePageState.siteUrl+"/php/index.php";
     showLoading("sms");
     //var num = storeNum.toSet(); http://192.168.55.103/message.php
     final Map<String, dynamic> bodys = {
@@ -189,7 +190,7 @@ class MessageState extends State<Message> {
     try {
       http.Response response = await http
           .post(
-            Uri.parse("https://smssending1.000webhostapp.com/index.php"),
+            Uri.parse(url),
             body: bodys,
           )
           .timeout(Duration(seconds: 20));
@@ -204,7 +205,7 @@ class MessageState extends State<Message> {
       showToast(msgs);
       Navigator.pop(context);
     } on FormatException {
-      var msgs = "Something went wrong";
+      var msgs = "Server went wrong";
       showToast(msgs);
       Navigator.pop(context);
     }

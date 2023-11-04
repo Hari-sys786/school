@@ -8,6 +8,7 @@ import 'package:one/Dashboard page/DashBoard.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'dart:convert' show json;
 import 'package:http/http.dart' as http;
+import 'package:one/main.dart';
 import '../Contacts page/AddContact.dart';
 
 class Detail extends StatefulWidget {
@@ -213,6 +214,7 @@ class DetailClasses extends State<Detail> {
 
   // sending sms api logic
   _sendingSms() async {
+    var url = MyHomePageState.siteUrl+"/php/index.php";
     showLoading();
     final Map<String, dynamic> bodys = {
       "message": msgController.text,
@@ -221,7 +223,7 @@ class DetailClasses extends State<Detail> {
     try {
       http.Response response = await http
           .post(
-            Uri.parse("https://smssending1.000webhostapp.com/index.php"),
+            Uri.parse(url),
             body: bodys,
           )
           .timeout(Duration(seconds: 20));
@@ -233,6 +235,10 @@ class DetailClasses extends State<Detail> {
       Navigator.pop(context);
     } on SocketException {
       var msgs = "Turn on internet connection";
+      showToast(msgs);
+      Navigator.pop(context);
+    } on FormatException {
+      var msgs = "Server went wrong";
       showToast(msgs);
       Navigator.pop(context);
     }
@@ -266,10 +272,11 @@ class DetailClasses extends State<Detail> {
       All.clear();
       Clskeyss.clear();
       var msgs = "SMS sent successfully ${res["balance"]}";
+      Navigator.pop(context);
+      Navigator.pop(context);
+      Navigator.pop(context);
       showToast(msgs);
       //sleep(Duration(seconds: 2));
-      Navigator.pop(context);
-      Navigator.pop(context);
     } else if (res1[0]["code"] == 204) {
       var msgs = "Invalid message content";
       showToast(msgs);
@@ -290,11 +297,11 @@ class DetailClasses extends State<Detail> {
       Navigator.pop(context);
     }
     contacts.clear();
-    if (res['status'] == "success") {
-      //print("a");
-      var bal = res["balance"];
-      Navigator.pop(context);
-    }
+    // if (res['status'] == "success") {
+    //   //print("a");
+    //   var bal = res["balance"];
+    //   Navigator.pop(context);
+    // }
   }
 
   // loading screen for sending sms

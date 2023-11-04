@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\one\\build\\app\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-cs\\values-cs.xml",
+            "outputFile": "D:\\one\\one\\build\\app\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-cs\\values-cs.xml",
             "map": [
                 {
                     "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\bb97fc5825c9f0a6e5769653b4cda1fe\\jetified-play-services-base-18.0.1\\res\\values-cs\\values.xml",

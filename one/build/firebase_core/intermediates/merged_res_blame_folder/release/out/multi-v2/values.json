@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\one\\build\\firebase_core\\intermediates\\res\\merged\\release\\values\\values.xml",
+            "outputFile": "D:\\one\\one\\build\\firebase_core\\intermediates\\res\\merged\\release\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\665840298d56d0fdba52e3101e2d3289\\jetified-window-1.0.0-beta04\\res\\values\\values.xml",
@@ -23,13 +23,13 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\19ac23eab6b89471460e998166753889\\jetified-play-services-basement-18.0.0\\res\\values\\values.xml",
+                    "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\e722aa1cebbb45e9556f40c200e9b83c\\jetified-play-services-basement-17.0.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "4,7",
                         "startColumns": "0,0",
-                        "startOffsets": "243,406",
+                        "startOffsets": "238,401",
                         "endColumns": "63,166",
-                        "endOffsets": "306,572"
+                        "endOffsets": "301,567"
                     },
                     "to": {
                         "startLines": "91,93",
@@ -61,7 +61,7 @@
             ]
         },
         {
-            "outputFile": "D:\\one\\build\\firebase_core\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
+            "outputFile": "D:\\one\\one\\build\\firebase_core\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\665840298d56d0fdba52e3101e2d3289\\jetified-window-1.0.0-beta04\\res\\values\\values.xml",
@@ -83,13 +83,13 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\19ac23eab6b89471460e998166753889\\jetified-play-services-basement-18.0.0\\res\\values\\values.xml",
+                    "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\e722aa1cebbb45e9556f40c200e9b83c\\jetified-play-services-basement-17.0.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "4,7",
                         "startColumns": "0,0",
-                        "startOffsets": "243,406",
+                        "startOffsets": "238,401",
                         "endColumns": "63,166",
-                        "endOffsets": "306,572"
+                        "endOffsets": "301,567"
                     },
                     "to": {
                         "startLines": "91,93",

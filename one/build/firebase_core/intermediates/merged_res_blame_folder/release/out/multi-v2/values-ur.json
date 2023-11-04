@@ -1,23 +1,23 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\one\\build\\firebase_core\\intermediates\\res\\merged\\release\\values-ur\\values-ur.xml",
+            "outputFile": "D:\\one\\one\\build\\firebase_core\\intermediates\\res\\merged\\release\\values-ur\\values-ur.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\19ac23eab6b89471460e998166753889\\jetified-play-services-basement-18.0.0\\res\\values-ur\\values.xml",
+                    "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\e722aa1cebbb45e9556f40c200e9b83c\\jetified-play-services-basement-17.0.0\\res\\values-ur\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "147",
-                        "endOffsets": "342"
+                        "startOffsets": "247",
+                        "endColumns": "210",
+                        "endOffsets": "457"
                     },
                     "to": {
                         "startLines": "2",
                         "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "151",
-                        "endOffsets": "202"
+                        "startOffsets": "105",
+                        "endColumns": "210",
+                        "endOffsets": "311"
                     }
                 },
                 {
@@ -32,31 +32,31 @@
                     "to": {
                         "startLines": "3",
                         "startColumns": "4",
-                        "startOffsets": "207",
+                        "startOffsets": "316",
                         "endColumns": "100",
-                        "endOffsets": "303"
+                        "endOffsets": "412"
                     }
                 }
             ]
         },
         {
-            "outputFile": "D:\\one\\build\\firebase_core\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-ur\\values-ur.xml",
+            "outputFile": "D:\\one\\one\\build\\firebase_core\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-ur\\values-ur.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\19ac23eab6b89471460e998166753889\\jetified-play-services-basement-18.0.0\\res\\values-ur\\values.xml",
+                    "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\e722aa1cebbb45e9556f40c200e9b83c\\jetified-play-services-basement-17.0.0\\res\\values-ur\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "147",
-                        "endOffsets": "342"
+                        "startOffsets": "247",
+                        "endColumns": "210",
+                        "endOffsets": "457"
                     },
                     "to": {
                         "startLines": "2",
                         "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "151",
-                        "endOffsets": "202"
+                        "startOffsets": "105",
+                        "endColumns": "210",
+                        "endOffsets": "311"
                     }
                 },
                 {
@@ -71,9 +71,9 @@
                     "to": {
                         "startLines": "3",
                         "startColumns": "4",
-                        "startOffsets": "207",
+                        "startOffsets": "316",
                         "endColumns": "100",
-                        "endOffsets": "303"
+                        "endOffsets": "412"
                     }
                 }
             ]

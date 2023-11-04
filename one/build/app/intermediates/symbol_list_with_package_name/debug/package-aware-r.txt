@@ -207,9 +207,8 @@ layout notification_template_part_chronometer
 layout notification_template_part_time
 layout toast_custom
 mipmap ic_launcher
-mipmap l
-mipmap log
-mipmap logo
+mipmap ic_launcher_adaptive_back
+mipmap ic_launcher_adaptive_fore
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
 string common_google_play_services_enable_title

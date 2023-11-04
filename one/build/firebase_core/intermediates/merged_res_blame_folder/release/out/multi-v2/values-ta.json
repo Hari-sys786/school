@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\one\\build\\firebase_core\\intermediates\\res\\merged\\release\\values-ta\\values-ta.xml",
+            "outputFile": "D:\\one\\one\\build\\firebase_core\\intermediates\\res\\merged\\release\\values-ta\\values-ta.xml",
             "map": [
                 {
                     "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\0c4ef39e1f0a69047a2107a9f395a96f\\core-1.6.0\\res\\values-ta\\values-ta.xml",
@@ -15,32 +15,32 @@
                     "to": {
                         "startLines": "3",
                         "startColumns": "4",
-                        "startOffsets": "216",
+                        "startOffsets": "330",
                         "endColumns": "100",
-                        "endOffsets": "312"
+                        "endOffsets": "426"
                     }
                 },
                 {
-                    "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\19ac23eab6b89471460e998166753889\\jetified-play-services-basement-18.0.0\\res\\values-ta\\values.xml",
+                    "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\e722aa1cebbb45e9556f40c200e9b83c\\jetified-play-services-basement-17.0.0\\res\\values-ta\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "156",
-                        "endOffsets": "351"
+                        "startOffsets": "247",
+                        "endColumns": "224",
+                        "endOffsets": "471"
                     },
                     "to": {
                         "startLines": "2",
                         "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "160",
-                        "endOffsets": "211"
+                        "startOffsets": "105",
+                        "endColumns": "224",
+                        "endOffsets": "325"
                     }
                 }
             ]
         },
         {
-            "outputFile": "D:\\one\\build\\firebase_core\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-ta\\values-ta.xml",
+            "outputFile": "D:\\one\\one\\build\\firebase_core\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-ta\\values-ta.xml",
             "map": [
                 {
                     "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\0c4ef39e1f0a69047a2107a9f395a96f\\core-1.6.0\\res\\values-ta\\values-ta.xml",
@@ -54,26 +54,26 @@
                     "to": {
                         "startLines": "3",
                         "startColumns": "4",
-                        "startOffsets": "216",
+                        "startOffsets": "330",
                         "endColumns": "100",
-                        "endOffsets": "312"
+                        "endOffsets": "426"
                     }
                 },
                 {
-                    "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\19ac23eab6b89471460e998166753889\\jetified-play-services-basement-18.0.0\\res\\values-ta\\values.xml",
+                    "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\e722aa1cebbb45e9556f40c200e9b83c\\jetified-play-services-basement-17.0.0\\res\\values-ta\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "156",
-                        "endOffsets": "351"
+                        "startOffsets": "247",
+                        "endColumns": "224",
+                        "endOffsets": "471"
                     },
                     "to": {
                         "startLines": "2",
                         "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "160",
-                        "endOffsets": "211"
+                        "startOffsets": "105",
+                        "endColumns": "224",
+                        "endOffsets": "325"
                     }
                 }
             ]

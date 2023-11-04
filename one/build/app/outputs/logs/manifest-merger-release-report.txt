@@ -1,10 +1,10 @@
 -- Merging decision tree log ---
 application
-INJECTED from D:\one\android\app\src\main\AndroidManifest.xml:8:5-42:19
-MERGED from [:firebase_database] D:\one\build\firebase_database\intermediates\library_manifest\release\AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_database] D:\one\build\firebase_database\intermediates\library_manifest\release\AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_core] D:\one\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_core] D:\one\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:7:5-13:19
+INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml:8:5-43:19
+MERGED from [:firebase_database] D:\one\one\build\firebase_database\intermediates\library_manifest\release\AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_database] D:\one\one\build\firebase_database\intermediates\library_manifest\release\AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_core] D:\one\one\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_core] D:\one\one\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:7:5-13:19
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\665840298d56d0fdba52e3101e2d3289\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\665840298d56d0fdba52e3101e2d3289\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
 MERGED from [com.google.firebase:firebase-analytics:20.1.2] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\20084a3d62e18cc19354b893b18acfa2\jetified-firebase-analytics-20.1.2\AndroidManifest.xml:7:5-20
@@ -48,25 +48,26 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ha
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.6.0] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\0c4ef39e1f0a69047a2107a9f395a96f\core-1.6.0\AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from D:\one\android\app\src\main\AndroidManifest.xml:10:9-32
+		ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:10:9-32
 	android:icon
-		ADDED from D:\one\android\app\src\main\AndroidManifest.xml:11:9-43
+		ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:12:9-43
+	android:usesCleartextTraffic
+		ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:11:9-44
 	android:name
-		INJECTED from D:\one\android\app\src\main\AndroidManifest.xml
-		ADDED from D:\one\android\app\src\main\AndroidManifest.xml:9:9-42
+		INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:9:9-42
 manifest
-ADDED from D:\one\android\app\src\main\AndroidManifest.xml:1:1-43:12
-INJECTED from D:\one\android\app\src\main\AndroidManifest.xml:1:1-43:12
-INJECTED from D:\one\android\app\src\main\AndroidManifest.xml:1:1-43:12
-INJECTED from D:\one\android\app\src\main\AndroidManifest.xml:1:1-43:12
-MERGED from [:firebase_database] D:\one\build\firebase_database\intermediates\library_manifest\release\AndroidManifest.xml:2:1-15:12
-MERGED from [:firebase_core] D:\one\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:2:1-15:12
-MERGED from [:fluttertoast] D:\one\build\fluttertoast\intermediates\library_manifest\release\AndroidManifest.xml:2:1-7:12
-MERGED from [:path_provider_android] D:\one\build\path_provider_android\intermediates\library_manifest\release\AndroidManifest.xml:2:1-7:12
+ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:1:1-44:12
+INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml:1:1-44:12
+INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml:1:1-44:12
+INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml:1:1-44:12
+MERGED from [:firebase_database] D:\one\one\build\firebase_database\intermediates\library_manifest\release\AndroidManifest.xml:2:1-15:12
+MERGED from [:firebase_core] D:\one\one\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:2:1-15:12
+MERGED from [:fluttertoast] D:\one\one\build\fluttertoast\intermediates\library_manifest\release\AndroidManifest.xml:2:1-7:12
+MERGED from [:flutter_phone_direct_caller] D:\one\one\build\flutter_phone_direct_caller\intermediates\library_manifest\release\AndroidManifest.xml:2:1-15:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\00bcc53f64a287e9d54a83747876a3c0\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\665840298d56d0fdba52e3101e2d3289\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
 MERGED from [com.google.firebase:firebase-analytics:20.1.2] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\20084a3d62e18cc19354b893b18acfa2\jetified-firebase-analytics-20.1.2\AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\18f30cdb6307357737d71d1bd031708b\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\fc5b831b385a7a51f46a83dc04d87bcf\jetified-firebase-database-20.0.4\AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.android.gms:play-services-measurement-api:20.1.2] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\2799a893ff406ae906cfa2d85ceb0d95\jetified-play-services-measurement-api-20.1.2\AndroidManifest.xml:17:1-37:12
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\661e3adbdc573dbd1a83d4439e2ec83f\jetified-firebase-appcheck-interop-16.0.0-beta02\AndroidManifest.xml:15:1-26:12
@@ -106,43 +107,41 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\7eaf0573eca30baef8604280406b76d3\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\89a507c44aa78cba1692bff7f1caddb6\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\894cf220db2e1068ae534af3b44f2b74\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\one\android\app\src\main\AndroidManifest.xml:1:1-43:12
-INJECTED from D:\one\android\app\src\main\AndroidManifest.xml:1:1-43:12
-INJECTED from D:\one\android\app\src\main\AndroidManifest.xml:1:1-43:12
+INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml:1:1-44:12
+INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml:1:1-44:12
+INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml:1:1-44:12
 	package
-		ADDED from D:\one\android\app\src\main\AndroidManifest.xml:2:5-30
-		INJECTED from D:\one\android\app\src\main\AndroidManifest.xml
-		INJECTED from D:\one\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:2:5-30
+		INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\one\android\app\src\main\AndroidManifest.xml
-		ADDED from D:\one\android\app\src\main\AndroidManifest.xml:1:1-43:12
-		INJECTED from D:\one\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:1:1-44:12
+		INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from D:\one\android\app\src\main\AndroidManifest.xml
-		ADDED from D:\one\android\app\src\main\AndroidManifest.xml:1:1-43:12
-		INJECTED from D:\one\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:1:1-44:12
+		INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\one\android\app\src\main\AndroidManifest.xml:1:11-69
+		ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:1:11-69
 uses-sdk
-INJECTED from D:\one\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\one\android\app\src\main\AndroidManifest.xml
-INJECTED from D:\one\android\app\src\main\AndroidManifest.xml
-MERGED from [:firebase_database] D:\one\build\firebase_database\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
-MERGED from [:firebase_database] D:\one\build\firebase_database\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
-MERGED from [:firebase_core] D:\one\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
-MERGED from [:firebase_core] D:\one\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
-MERGED from [:fluttertoast] D:\one\build\fluttertoast\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
-MERGED from [:fluttertoast] D:\one\build\fluttertoast\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
-MERGED from [:path_provider_android] D:\one\build\path_provider_android\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
-MERGED from [:path_provider_android] D:\one\build\path_provider_android\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml
+INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml
+MERGED from [:firebase_database] D:\one\one\build\firebase_database\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_database] D:\one\one\build\firebase_database\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] D:\one\one\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] D:\one\one\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] D:\one\one\build\fluttertoast\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] D:\one\one\build\fluttertoast\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_phone_direct_caller] D:\one\one\build\flutter_phone_direct_caller\intermediates\library_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_phone_direct_caller] D:\one\one\build\flutter_phone_direct_caller\intermediates\library_manifest\release\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\00bcc53f64a287e9d54a83747876a3c0\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\00bcc53f64a287e9d54a83747876a3c0\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\665840298d56d0fdba52e3101e2d3289\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\665840298d56d0fdba52e3101e2d3289\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-analytics:20.1.2] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\20084a3d62e18cc19354b893b18acfa2\jetified-firebase-analytics-20.1.2\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:20.1.2] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\20084a3d62e18cc19354b893b18acfa2\jetified-firebase-analytics-20.1.2\AndroidManifest.xml:5:5-44
-MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\18f30cdb6307357737d71d1bd031708b\multidex-2.0.0\AndroidManifest.xml:20:5-43
-MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\18f30cdb6307357737d71d1bd031708b\multidex-2.0.0\AndroidManifest.xml:20:5-43
 MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\fc5b831b385a7a51f46a83dc04d87bcf\jetified-firebase-database-20.0.4\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\fc5b831b385a7a51f46a83dc04d87bcf\jetified-firebase-database-20.0.4\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.android.gms:play-services-measurement-api:20.1.2] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\2799a893ff406ae906cfa2d85ceb0d95\jetified-play-services-measurement-api-20.1.2\AndroidManifest.xml:20:5-44
@@ -221,56 +220,56 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\harim\.gradl
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\89a507c44aa78cba1692bff7f1caddb6\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\894cf220db2e1068ae534af3b44f2b74\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\894cf220db2e1068ae534af3b44f2b74\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
-INJECTED from D:\one\android\app\src\main\AndroidManifest.xml
-INJECTED from D:\one\android\app\src\main\AndroidManifest.xml
+INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml
+INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from D:\one\android\app\src\main\AndroidManifest.xml
-		ADDED from D:\one\android\app\src\main\AndroidManifest.xml
-		INJECTED from D:\one\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\one\android\app\src\main\AndroidManifest.xml
-		ADDED from D:\one\android\app\src\main\AndroidManifest.xml
-		INJECTED from D:\one\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\one\one\android\app\src\main\AndroidManifest.xml
 activity#com.example.one.MainActivity
-ADDED from D:\one\android\app\src\main\AndroidManifest.xml:12:9-36:20
+ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:13:9-37:20
 	android:launchMode
-		ADDED from D:\one\android\app\src\main\AndroidManifest.xml:14:13-43
+		ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:15:13-43
 	android:hardwareAccelerated
-		ADDED from D:\one\android\app\src\main\AndroidManifest.xml:17:13-47
+		ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:18:13-47
 	android:windowSoftInputMode
-		ADDED from D:\one\android\app\src\main\AndroidManifest.xml:18:13-55
+		ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:19:13-55
 	android:configChanges
-		ADDED from D:\one\android\app\src\main\AndroidManifest.xml:16:13-163
+		ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:17:13-163
 	android:theme
-		ADDED from D:\one\android\app\src\main\AndroidManifest.xml:15:13-47
+		ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:16:13-47
 	android:name
-		ADDED from D:\one\android\app\src\main\AndroidManifest.xml:13:13-41
+		ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:14:13-41
 meta-data#io.flutter.embedding.android.NormalTheme
-ADDED from D:\one\android\app\src\main\AndroidManifest.xml:23:13-26:17
+ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:24:13-27:17
 	android:resource
-		ADDED from D:\one\android\app\src\main\AndroidManifest.xml:25:15-52
+		ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:26:15-52
 	android:name
-		ADDED from D:\one\android\app\src\main\AndroidManifest.xml:24:15-70
+		ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:25:15-70
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\one\android\app\src\main\AndroidManifest.xml:32:13-35:29
+ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:33:13-36:29
 action#android.intent.action.MAIN
-ADDED from D:\one\android\app\src\main\AndroidManifest.xml:33:17-68
+ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:34:17-68
 	android:name
-		ADDED from D:\one\android\app\src\main\AndroidManifest.xml:33:25-66
+		ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:34:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\one\android\app\src\main\AndroidManifest.xml:34:17-76
+ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:35:17-76
 	android:name
-		ADDED from D:\one\android\app\src\main\AndroidManifest.xml:34:27-74
+		ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:35:27-74
 meta-data#flutterEmbedding
-ADDED from D:\one\android\app\src\main\AndroidManifest.xml:39:9-41:33
+ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:40:9-42:33
 	android:value
-		ADDED from D:\one\android\app\src\main\AndroidManifest.xml:41:13-30
+		ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:42:13-30
 	android:name
-		ADDED from D:\one\android\app\src\main\AndroidManifest.xml:40:13-44
+		ADDED from D:\one\one\android\app\src\main\AndroidManifest.xml:41:13-44
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [:firebase_database] D:\one\build\firebase_database\intermediates\library_manifest\release\AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_core] D:\one\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_core] D:\one\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:8:9-12:19
+ADDED from [:firebase_database] D:\one\one\build\firebase_database\intermediates\library_manifest\release\AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_core] D:\one\one\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_core] D:\one\one\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:8:9-12:19
 MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\fc5b831b385a7a51f46a83dc04d87bcf\jetified-firebase-database-20.0.4\AndroidManifest.xml:29:9-35:19
 MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\fc5b831b385a7a51f46a83dc04d87bcf\jetified-firebase-database-20.0.4\AndroidManifest.xml:29:9-35:19
 MERGED from [com.google.android.gms:play-services-measurement-api:20.1.2] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\2799a893ff406ae906cfa2d85ceb0d95\jetified-play-services-measurement-api-20.1.2\AndroidManifest.xml:28:9-34:19
@@ -286,19 +285,29 @@ MERGED from [com.google.firebase:firebase-common:20.1.0] C:\Users\harim\.gradle\
 	android:directBootAware
 		ADDED from [com.google.firebase:firebase-common:20.1.0] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\61c7187a923a1ea0d7c46056d484b33a\jetified-firebase-common-20.1.0\AndroidManifest.xml:35:13-43
 	android:name
-		ADDED from [:firebase_database] D:\one\build\firebase_database\intermediates\library_manifest\release\AndroidManifest.xml:8:18-89
+		ADDED from [:firebase_database] D:\one\one\build\firebase_database\intermediates\library_manifest\release\AndroidManifest.xml:8:18-89
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.database.FlutterFirebaseAppRegistrar
-ADDED from [:firebase_database] D:\one\build\firebase_database\intermediates\library_manifest\release\AndroidManifest.xml:9:13-11:85
+ADDED from [:firebase_database] D:\one\one\build\firebase_database\intermediates\library_manifest\release\AndroidManifest.xml:9:13-11:85
 	android:value
-		ADDED from [:firebase_database] D:\one\build\firebase_database\intermediates\library_manifest\release\AndroidManifest.xml:11:17-82
+		ADDED from [:firebase_database] D:\one\one\build\firebase_database\intermediates\library_manifest\release\AndroidManifest.xml:11:17-82
 	android:name
-		ADDED from [:firebase_database] D:\one\build\firebase_database\intermediates\library_manifest\release\AndroidManifest.xml:10:17-127
+		ADDED from [:firebase_database] D:\one\one\build\firebase_database\intermediates\library_manifest\release\AndroidManifest.xml:10:17-127
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar
-ADDED from [:firebase_core] D:\one\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:9:13-11:85
+ADDED from [:firebase_core] D:\one\one\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:9:13-11:85
 	android:value
-		ADDED from [:firebase_core] D:\one\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:11:17-82
+		ADDED from [:firebase_core] D:\one\one\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:11:17-82
 	android:name
-		ADDED from [:firebase_core] D:\one\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:10:17-124
+		ADDED from [:firebase_core] D:\one\one\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:10:17-124
+uses-permission#android.permission.CALL_PHONE
+ADDED from [:flutter_phone_direct_caller] D:\one\one\build\flutter_phone_direct_caller\intermediates\library_manifest\release\AndroidManifest.xml:9:5-69
+	android:name
+		ADDED from [:flutter_phone_direct_caller] D:\one\one\build\flutter_phone_direct_caller\intermediates\library_manifest\release\AndroidManifest.xml:9:22-66
+uses-feature#android.hardware.telephony
+ADDED from [:flutter_phone_direct_caller] D:\one\one\build\flutter_phone_direct_caller\intermediates\library_manifest\release\AndroidManifest.xml:11:5-13:36
+	android:required
+		ADDED from [:flutter_phone_direct_caller] D:\one\one\build\flutter_phone_direct_caller\intermediates\library_manifest\release\AndroidManifest.xml:13:9-33
+	android:name
+		ADDED from [:flutter_phone_direct_caller] D:\one\one\build\flutter_phone_direct_caller\intermediates\library_manifest\release\AndroidManifest.xml:12:9-50
 uses-library#androidx.window.extensions
 ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\harim\.gradle\caches\transforms-2\files-2.1\665840298d56d0fdba52e3101e2d3289\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
 	android:required

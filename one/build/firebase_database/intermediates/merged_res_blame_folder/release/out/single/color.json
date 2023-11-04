@@ -1,14 +1,14 @@
 [
     {
-        "merged": "D:\\one\\build\\firebase_database\\intermediates\\res\\merged\\release\\color\\common_google_signin_btn_text_dark.xml",
-        "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\bb97fc5825c9f0a6e5769653b4cda1fe\\jetified-play-services-base-18.0.1\\res\\color\\common_google_signin_btn_text_dark.xml"
+        "merged": "D:\\one\\one\\build\\firebase_database\\intermediates\\res\\merged\\release\\color\\common_google_signin_btn_tint.xml",
+        "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\02183929bdece90fe8f32d0006a51759\\jetified-play-services-base-17.1.0\\res\\color\\common_google_signin_btn_tint.xml"
     },
     {
-        "merged": "D:\\one\\build\\firebase_database\\intermediates\\res\\merged\\release\\color\\common_google_signin_btn_text_light.xml",
-        "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\bb97fc5825c9f0a6e5769653b4cda1fe\\jetified-play-services-base-18.0.1\\res\\color\\common_google_signin_btn_text_light.xml"
+        "merged": "D:\\one\\one\\build\\firebase_database\\intermediates\\res\\merged\\release\\color\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\02183929bdece90fe8f32d0006a51759\\jetified-play-services-base-17.1.0\\res\\color\\common_google_signin_btn_text_dark.xml"
     },
     {
-        "merged": "D:\\one\\build\\firebase_database\\intermediates\\res\\merged\\release\\color\\common_google_signin_btn_tint.xml",
-        "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\bb97fc5825c9f0a6e5769653b4cda1fe\\jetified-play-services-base-18.0.1\\res\\color\\common_google_signin_btn_tint.xml"
+        "merged": "D:\\one\\one\\build\\firebase_database\\intermediates\\res\\merged\\release\\color\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\harim\\.gradle\\caches\\transforms-2\\files-2.1\\02183929bdece90fe8f32d0006a51759\\jetified-play-services-base-17.1.0\\res\\color\\common_google_signin_btn_text_light.xml"
     }
 ]
